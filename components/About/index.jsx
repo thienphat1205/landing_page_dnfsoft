@@ -10,7 +10,7 @@ function About() {
           <p className={s.textTitle}>About Us</p>
           <p className={s.textDesc}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-            minima neque tempora reiciendis.
+            minima neque tempora reiciendis. Aaaaaaaaa
           </p>
         </div>
       </div>
