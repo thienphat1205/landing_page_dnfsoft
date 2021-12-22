@@ -1,6 +1,5 @@
 import React from "react";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import s from "./index.module.less";
 
 function HeadingText({ title = "", desc = "" }) {

@@ -2,7 +2,6 @@ import React from "react";
 import { Row, Col } from "antd";
 import s from "./index.module.less";
 import Section from "../Section";
-import "aos/dist/aos.css";
 import HeadingText from "../HeadingText";
 
 function About() {
