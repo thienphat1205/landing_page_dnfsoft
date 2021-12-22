@@ -37,7 +37,7 @@ function TeamMember() {
             minima neque tempora reiciendis."
           />
         </div>
-        <div data-aos="fade-left">
+        <div data-aos="flip-left">
           <Row gutter={[20, 20]}>
             {memberList.map((item, idx) => {
               return (
