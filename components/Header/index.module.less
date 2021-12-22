@@ -1,0 +1,77 @@
+@import "../../styles/variables.less";
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 80px;
+  padding: 0 20px;
+  transition: all 0.8s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+    height: 100%;
+    margin: 0 auto;
+    .companyName {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 600;
+      color: @primaryColor;
+      flex-grow: 1;
+    }
+    .navMenu{
+      display: flex;
+      list-style: none;
+      text-align: center;
+      margin-right: 2rem;
+    }
+    .navIcon {
+      display: none;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    .container {
+      .navIcon {
+        color: #fff;
+        display: block;
+        cursor: pointer;
+        font-size: 1.8rem;
+      }
+      .navMenu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 1px solid #fff;
+        position: absolute;
+        top: 80px;
+        left: -110%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        height: calc(100vh - 80px);
+      }
+      .active {
+        background: #32373C;
+        left: 0px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+      }
+    }
+  }
+}

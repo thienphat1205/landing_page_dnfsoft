@@ -1,0 +1,102 @@
+.cover {
+  height: 100vh;
+  background-image: url("../../assets/images/image.png");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 600px;
+  position: relative;
+  
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .contentCover {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .viewMouse {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+  .itemCarousel {
+    width: 100%;
+    height: fit-content;
+    color: #fff;
+    display: flex !important;
+    justify-content: center;
+    .textTitle {
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .textDesc {
+      font-size: 30px;
+      font-weight: 100;
+      text-align: center;
+      padding: 0 6rem;
+    }
+    .viewButton {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &__touch {
+        font-size: 16px;
+        border-radius: 30px;
+        width: 157px;
+        height: 46px;
+      }
+    }
+  }
+  :global {
+    .ant-carousel .slick-dots-bottom {
+      bottom: -2.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover {
+    .contentCover {
+      top: 50%;
+    }
+    .viewMouse {
+      display: none;
+    }
+    .itemCarousel {
+      .textTitle {
+        font-size: 2.5rem;
+      }
+      .textDesc {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cover {
+    .itemCarousel {
+      .textTitle {
+        font-size: 25px;
+      }
+      .textDesc {
+        font-size: 16px;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}

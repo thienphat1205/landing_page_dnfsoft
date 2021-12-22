@@ -1,0 +1,36 @@
+.mouse {
+  position: relative;
+  width: 25px;
+  height: 45px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  &__wheel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    margin: 2px auto 0;
+    width: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-animation: 1.6s ease infinite wheel-up-down;
+    -moz-animation: 1.6s ease infinite wheel-up-down;
+    animation: 1.6s ease infinite wheel-up-down;
+    @keyframes wheel-up-down {
+      from {
+        opacity: 1;
+        top: 5px;
+      }
+      to {
+        opacity: 0;
+        top: 15px;
+      }
+    }
+  }
+}
