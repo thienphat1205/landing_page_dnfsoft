@@ -1,19 +1,49 @@
-@import "../../styles/variables.less";
 
-.about{
+
+@import "../../styles/variables.less";
+.about {
+  width: 100%;
+  .viewTop {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .viewImage {
+    background-image: url("../../assets/images/background2.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    .viewTop{
-        text-align: center;
-        .textTitle{
-            font-size: 32px;
-            font-weight: 600;
-            color: @primaryColor;
-            margin-bottom: 1rem;
-        }
-        .textDesc {
-            color: @secondaryText;
-            font-size: 20px;
-            font-weight: 200;
-        }
+    height: 350px;
+    position: relative;
+    z-index: 10;
+  }
+  .viewCircle {
+    width: 300px;
+    height: 300px;
+    content: "";
+    z-index: 1;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -90px;
+    right: -90px;
+    background: rgba(#3399ff, 0.07);
+  }
+  .textTitleSmall{
+      font-size: 2rem;
+      font-weight: 500;
+  }
+  .paragraph{
+    color: @secondaryText;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    .viewCircle {
+      display: none;
     }
+  }
 }

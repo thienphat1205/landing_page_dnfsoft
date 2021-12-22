@@ -34,8 +34,8 @@ function Header() {
         style={
           colorChange
             ? {
-                backgroundColor: "#fff",
-                borderBottom: "1px solid rgba(0, 0, 0, 0.2)",
+                backgroundColor: "#f7f7f7",
+                boxShadow: "4px 0 20px -5px rgb(0 0 0 / 10%)",
               }
             : {}
         }

@@ -1,0 +1,28 @@
+@import "../../styles/variables.less";
+
+.root {
+  .textTitle {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: .2rem;
+    cursor: pointer;
+    background-image: linear-gradient(to right,
+    #3399ff, @primaryColor);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all .1s;
+    &:hover {
+        transform: skewY(5deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(#000, .2)
+    }
+  }
+  .textDesc {
+    color: @secondaryText;
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
