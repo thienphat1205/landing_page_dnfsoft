@@ -28,7 +28,7 @@ export const Cover = () => {
             return (
               <div className={styles.itemCarousel} key={idx}>
                 <div style={{ maxWidth: "1140px" }}>
-                  <p className={styles.textTitle}>{title}</p>
+                  <h2 className={styles.textTitle}>{title}</h2>
                   <p className={styles.textDesc}>{desc}</p>
                   <div className={styles.viewButton}>
                     <Button className={styles.viewButton__touch} type="primary">

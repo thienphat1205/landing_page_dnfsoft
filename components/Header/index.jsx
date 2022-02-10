@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaRegWindowClose } from "react-icons/fa";
 import styles from "./index.module.less";
+import Link from "next/link";
 
 function Header() {
   const [colorChange, setColorchange] = useState(false);
@@ -26,33 +27,51 @@ function Header() {
     };
   });
 
+  const className = !colorChange
+    ? styles.header
+    : `${styles.header} ${styles.headerChangeColor}`;
+
   return (
     <>
       {click && <div onClick={handleClose} className={styles.overlay} />}
-      <div
-        className={styles.header}
-        style={
-          colorChange
-            ? {
-                backgroundColor: "#f7f7f7",
-                boxShadow: "4px 0 20px -5px rgb(0 0 0 / 10%)",
-              }
-            : {}
-        }
-      >
+      <div className={className} style={colorChange ? {} : {}}>
         <div className={styles.container}>
-          <p
+          <h1
             className={styles.companyName}
-            style={!colorChange ? { color: "#fff" } : {}}
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth", // for smoothly scrolling
+              });
+            }}
           >
-            DNFSOFT
-          </p>
+            <Link href="">
+              <a className={!colorChange ? `${styles.colorWhite}` : ""}>
+                DNFSOFT
+              </a>
+            </Link>
+          </h1>
           <div
             className={
               click ? `${styles.navMenu} ${styles.active}` : `${styles.navMenu}`
             }
           >
-            Nav Menu
+            <Link href="#about">
+              <a
+                className={!colorChange ? `${styles.colorWhite}` : ""}
+                onClick={handleClose}
+              >
+                About
+              </a>
+            </Link>
+            <Link href="#team">
+              <a
+                className={!colorChange ? `${styles.colorWhite}` : ""}
+                onClick={handleClose}
+              >
+                Team
+              </a>
+            </Link>
           </div>
           {click ? (
             <FaRegWindowClose
