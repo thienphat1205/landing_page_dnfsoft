@@ -6,7 +6,7 @@ import HeadingText from "../HeadingText";
 
 function About() {
   return (
-    <Section>
+    <Section id="about">
       <div className={s.about}>
         <div className={s.viewTop}>
           <HeadingText

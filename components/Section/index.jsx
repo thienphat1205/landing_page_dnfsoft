@@ -1,11 +1,11 @@
 import React from "react";
 import s from "./index.module.less";
 
-function Section({ styles, children }) {
+function Section({ styles, children, id }) {
   return (
-    <div className={s.viewSection} style={{ ...styles }}>
+    <section className={s.viewSection} style={{ ...styles }} id={id}>
       <div className={s.container}>{children}</div>
-    </div>
+    </section>
   );
 }
 

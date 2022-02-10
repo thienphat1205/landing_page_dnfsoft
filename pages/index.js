@@ -10,12 +10,8 @@ export default function Home() {
       <HeadHTML />
       <Header />
       <Cover />
-      <div id="about">
-        <About />
-      </div>
-      <div id="team">
-        <TeamMember />
-      </div>
+      <About />
+      <TeamMember />
     </>
   );
 }
