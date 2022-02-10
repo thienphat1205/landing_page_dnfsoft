@@ -28,7 +28,10 @@ const memberList = [
 
 function TeamMember() {
   return (
-    <Section styles={{ backgroundColor: "#fff" }} id="team">
+    <Section
+      styles={{ backgroundColor: "#fff", padding: "5rem 15px" }}
+      id="team"
+    >
       <div className={s.teamMember}>
         <div className={s.viewTop}>
           <HeadingText
